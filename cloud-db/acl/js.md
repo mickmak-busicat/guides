@@ -72,12 +72,12 @@ signed up user would start with these roles.
 const Manager = skygear.Role.define('manager');
 const Visitor = new skygear.Role('visitor');
 // either way of defining roles is fine
-skygear.publicDB.setAdminRole([Manager]).then((roles) => {
+skygear.setAdminRole([Manager]).then((roles) => {
   console.log(roles); // [ 'manager' ]
 }, (error) => {
   console.error(error);
 });
-skygear.publicDB.setDefaultRole([Visitor]).then(...);
+skygear.setDefaultRole([Visitor]).then(...);
 ```
 
 ### Changing roles
